@@ -6,16 +6,16 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="CyVerse RStudio verse" \
+      org.label-schema.name="Michele's RStudio verse" \
       org.label-schema.description="Built from Rocker-Project RStudio Verse, additional depends for CyVerse K8s workbench" \
-      org.label-schema.url="https://cyverse.org" \
+      org.label-schema.url="https://cosimichele.github.com" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="e.g. https://github.com/cyverse-vice/rstudio-verse" \
       org.label-schema.vendor="CyVerse" \
       org.label-schema.version=$VERSION \
       org.label-schema.schema-version="1.0.0"
 
-MAINTAINER "Tyson Lee Swetnam tswetnam@cyverse.org"
+MAINTAINER "Michele Cosi cosi at arizona.edu"
 
 # Install a few dependencies for iCommands, text editing, and monitoring instances
 RUN apt-get update && apt-get install -y ca-certificates lsb-release wget apt-transport-https curl supervisor nginx gnupg2 libfuse2 nano htop gcc less nodejs software-properties-common apt-utils glances
